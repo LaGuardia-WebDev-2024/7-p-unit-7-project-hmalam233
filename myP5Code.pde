@@ -4,20 +4,51 @@ void setup() {
 }
 
 //🎯Variable Declarations Go Here
-var fireworkX = 20;
+var leftX = 200;
+var rightX = 250;
+var sunRadius = 100;
 
-//🟢Draw Procedure - Runs on Repeat
+
+
+//🟢Draw Function - Runs on Repeat
 draw = function(){
+noStroke()
+
+// shapes  and colorr
+background(184, 236, 255);
+
+// sun
+fill(255, 170, 0);
+ellipse(200,100, sunRadius, sunRadius);
+
+// clouds
+fill(255, 255, 255);
+
+//left cloud
+ellipse(leftX, 150, 126, 97)
+ellipse(leftX+62, 150, 70, 60);
+ellipse(leftX-62,150, 70, 60);
+
+//right cloud
+ellipse(rightX, 100, 126, 97);
+ellipse(rightX+62, 100, 70, 60);
+ellipse(rightX-62, 100, 70, 60);
+
+leftX +=4;
+rightX -=2;
+sunRadius +=2 
+
+if(leftX > 600){
+   leftX = 200;
+   rightX = 250;
+   sunRadius = 100; 
+
+}
+   
  
-  background(255,255,255,0);
-  
-   if(mousePressed){
-    showXYPositions();
-    
-  }
   
   //🎯Animation Code Goes Here
-  rect(fireworkX, 15, 10, 10);
+
   
   fireworkX = fireworkX + 1;
 
@@ -26,13 +57,3 @@ draw = function(){
 //🟡Extra FUN Features Ms. Hall Added
 //Proceed with Caution (and Curiosity!)
 
-showXYPositions = function(){
-    fill(255,255,255)
-    rect(270,300,150,100)
-    fill(0,0,0)
-    textSize(30)
-    text("x = " + mouseX + "\ny = " +mouseY, 290, 350)
-    fill(255,0,255)
-    ellipse(mouseX, mouseY, 10, 10);
-    fill(255,255,255)
-}

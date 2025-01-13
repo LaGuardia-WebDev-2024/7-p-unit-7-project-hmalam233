@@ -34,23 +34,23 @@ ellipse(rightX, 100, 126, 97);
 ellipse(rightX+62, 100, 70, 60);
 ellipse(rightX-62, 100, 70, 60);
 
-leftX +=4;
-rightX -=2;
-sunRadius +=2 
+
+leftX += 2;
+rightX -= 2;
+sunRadius += 2; 
+
 
 if(leftX > 600){
    leftX = 200;
    rightX = 250;
    sunRadius = 100; 
-
 }
-   
- 
+
   
   //🎯Animation Code Goes Here
 
   
-  fireworkX = fireworkX + 1;
+
 
 }
 

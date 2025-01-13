@@ -15,10 +15,10 @@ draw = function(){
 noStroke()
 
 // shapes  and colorr
-background(184, 236, 255);
+background(33, 67, 80 );
 
-// sun
-fill(255, 170, 0);
+// moon
+fill(245, 245, 245 );
 ellipse(200,100, sunRadius, sunRadius);
 
 // clouds

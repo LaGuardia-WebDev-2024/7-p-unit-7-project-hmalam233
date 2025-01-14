@@ -7,7 +7,9 @@ void setup() {
 var leftX = 200;
 var rightX = 250;
 var sunRadius = 100;
-
+var down = 10
+var down1 =11
+var grow =30
 
 
 //🟢Draw Function - Runs on Repeat
@@ -15,7 +17,7 @@ draw = function(){
 noStroke()
 
 // shapes  and colorr
-background(33, 67, 80 );
+background(33, 67, 80);
 
 // moon
 fill(245, 245, 245 );
@@ -24,21 +26,25 @@ ellipse(200,100, sunRadius, sunRadius);
 // clouds
 fill(255, 255, 255);
 
-//left cloud
-ellipse(leftX, 150, 126, 97)
-ellipse(leftX+62, 150, 70, 60);
-ellipse(leftX-62,150, 70, 60);
+//left circle
+ellipse(100,down,30,30)
 
-//right cloud
-ellipse(rightX, 100, 126, 97);
-ellipse(rightX+62, 100, 70, 60);
-ellipse(rightX-62, 100, 70, 60);
+//right circle 
+ellipse(300,down1,30,30)
+
+//left end circle
+ellipse(20,down,20,20)
+
+//right end circle 
+ellipse(400,down,grow,grow)
 
 
 leftX += 2;
 rightX -= 2;
 sunRadius += 2; 
-
+down +=2
+down1 +=2.1
+grow +=1
 
 if(leftX > 600){
    leftX = 200;
